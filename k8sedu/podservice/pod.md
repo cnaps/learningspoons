@@ -2,6 +2,8 @@
 - Docker Desktop 설치 https://docs.docker.com/desktop/mac/install/ .
 
 - 환경 - 쿠버네티스 설치 : Enable Kubernets 설정
+- kubectl 설치 
+- 
   
 ### Pod,Replicaset,Deployment, Service 실습 
 - ngix-pod.yaml작성
