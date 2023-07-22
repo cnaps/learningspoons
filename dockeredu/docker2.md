@@ -1,13 +1,22 @@
-## Docker Desktop  
+## 도커 , 쿠버네티스 실습
+### 도커 실습
+- [도커사용법 기본](./dockeredu/docker1.md)
+- [켄테이너 외부 접속](./dockeredu/docker2.md)
+- [이미지 생성 ,저장소 push,도커파일](./dockeredu/docker3.md)
+### 쿠버네티스 실습
+- [파드,디플로이먼트,서비스,레플리카](./k8sedu/podservice/pod.md)
+- [인그레스](./k8sedu/ingress/ingress.md)
+
+### 사전 준비사항
 - Docker Desktop 설치 https://docs.docker.com/desktop/mac/install/ .
 
   
-### Docker 실습1 - 외부 노출,   
+### Docker 실습1 - 외부 접속   
 - 컨테이너를 외부에 노출해 보자. 컨테이너 포트와 로컬 포트 바인딩
 ```
 docker run -i -t --name mywebserver -p 80:80  ubuntu:14.04
 root@eed326df35a1:/#
-... 
+``` 
 
 - 컨테이너에 내부에 웹서버 설치하고 외부에서 접속
 ```
@@ -24,12 +33,14 @@ eed326df35a1   ubuntu:14.04   "/bin/bash"               52 minutes ago   Up 42 m
 ```
 - 브라우저에서 0.0.0.0:80 포트로 확인하면 컨테이너에서 실행되는 아파치 웹서버 확인 가능
 ![img.png](img.png)
+
 ### ocker 실습2 : 어플리케이션, DB 생성하여 외부 접속
 
 - 2개의 컨테이너 어플리케이션 과 데이터베이스 설치 후 외부에서 접속 
 - db 서버 컨테이너 와 어플리케이션 서버 컨테이너를 생성 실행 
 - 
 - mysql 데이터베이스 생성
+
 ```
 docker run -d \
 > --name wordpressdb \
@@ -37,9 +48,10 @@ docker run -d \
 > -e MYSQL_DATABASE=wordpress \
 > mysql:5.7
 ```
+
 - 워드 프레스 어플리케이션 생성
 ```
-ocker rnd -d \
+docker rnd -d \
 > -e WORDPRESS_DB_HOST=mysql \
 > -e WORDPRESS_DB_USER=root \
 > -e WORDPRESS_DB_PASSWORD=password \
