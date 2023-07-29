@@ -18,7 +18,7 @@
 ### Pod,Replicaset,Deployment, Service 실습 
 - ngix-pod.yaml작성
 ```
-kind : Pod
+echo 'kind : Pod
 apiVersion : v1
 metadata :
   name : my-nginx-pod
@@ -27,7 +27,7 @@ spec:
   - name : my-nginx-container
     image: nginx:latest 
     ports:
-      - containerPort: 80
+      - containerPort: 80' > ngix-pod.yaml
 
 ```
 
