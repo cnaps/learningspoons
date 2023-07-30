@@ -13,7 +13,23 @@
 
 - 환경 - 쿠버네티스 설치 : Enable Kubernets 설정
 - [kubectl 설치] (https://kubernetes.io/ko/docs/tasks/tools/install-kubectl-macos/)
-- 
+
+- kubectl 버전 및 연결확인해보기
+```
+~  kubectl version --short
+Flag --short has been deprecated, and will be removed in the future. The --short output will become the default.
+Client Version: v1.27.2
+Kustomize Version: v5.0.1
+Server Version: v1.27.2
+~  kubectl cluster-info
+Kubernetes control plane is running at https://kubernetes.docker.internal:6443
+CoreDNS is running at https://kubernetes.docker.internal:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+~  kubectl get nodes
+NAME             STATUS   ROLES           AGE   VERSION
+docker-desktop   Ready    control-plane   15d   v1.27.2
+```
   
 ### Pod,Replicaset,Deployment, Service 실습 
 - ngix-pod.yaml작성
