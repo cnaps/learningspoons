@@ -12,7 +12,7 @@
 
 
 - 환경 - 쿠버네티스 설치 : Enable Kubernets 설정
-- kubectl 설치 
+- [kubectl 설치] (https://kubernetes.io/ko/docs/tasks/tools/install-kubectl-macos/)
 - 
   
 ### Pod,Replicaset,Deployment, Service 실습 
