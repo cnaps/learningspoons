@@ -30,6 +30,17 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 NAME             STATUS   ROLES           AGE   VERSION
 docker-desktop   Ready    control-plane   15d   v1.27.2
 ```
+- 여러개의 클러스터를 접근하는 경우 아래와 같이 연결정보를 확인 후 docker-desktop으로 접속을 변경하도록 하자.
+- kubectl config 확인
+``` 
+  > kubectl config current-context
+  docker-desktop
+```
+- 도커 데스크탑으로 config 변경
+``` 
+  > kubectl config use-context docker-desktop
+  Switched to context "docker-desktop".
+```
   
 ### Pod,Replicaset,Deployment, Service 실습 
 - ngix-pod.yaml작성
