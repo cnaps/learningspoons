@@ -12,8 +12,26 @@
 
 
 - 환경 - 쿠버네티스 설치 : Enable Kubernets 설정
-- kubectl config 확인
+- [kubectl 설치] (https://kubernetes.io/ko/docs/tasks/tools/install-kubectl-macos/)
 
+- kubectl 버전 및 연결확인해보기
+```
+~  kubectl version --short
+Flag --short has been deprecated, and will be removed in the future. The --short output will become the default.
+Client Version: v1.27.2
+Kustomize Version: v5.0.1
+Server Version: v1.27.2
+~  kubectl cluster-info
+Kubernetes control plane is running at https://kubernetes.docker.internal:6443
+CoreDNS is running at https://kubernetes.docker.internal:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+~  kubectl get nodes
+NAME             STATUS   ROLES           AGE   VERSION
+docker-desktop   Ready    control-plane   15d   v1.27.2
+```
+- 여러개의 클러스터를 접근하는 경우 아래와 같이 연결정보를 확인 후 docker-desktop으로 접속을 변경하도록 하자.
+- kubectl config 확인
 ``` 
   > kubectl config current-context
   docker-desktop
@@ -23,7 +41,6 @@
   > kubectl config use-context docker-desktop
   Switched to context "docker-desktop".
 ```
-
   
 # Ingress 실습 1
 - 인그레스 컨트롤러 환경 설정 
