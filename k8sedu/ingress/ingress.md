@@ -12,8 +12,6 @@
 
 
 - 환경 - 쿠버네티스 설치 : Enable Kubernets 설정
-  
-# Ingress 실습 1
 - kubectl config 확인
 
 ``` 
@@ -25,6 +23,9 @@
   > kubectl config use-context docker-desktop
   Switched to context "docker-desktop".
 ```
+
+  
+# Ingress 실습 1
 - 인그레스 컨트롤러 환경 설정 
 ``` 
   > kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.6.4/deploy/static/provider/cloud/deploy.yaml
