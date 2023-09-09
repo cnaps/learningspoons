@@ -11,3 +11,13 @@
 - Docker Desktop 설치 https://docs.docker.com/desktop/mac/install/ .
 - 환경 - 쿠버네티스 설치 : Enable Kubernets 설정
 - kubectl 설치 
+
+
+### 마이크로서비스 구현 
+- 도서서비스(https://github.com/cnaps/BookMS)
+- 대여서비스(https://github.com/cnaps/RentalMS)
+- 회원서비스(https://github.com/cnaps/MemberMS1)
+- 베스트도서서비스(https://github.com/cnaps/BestBookMS)
+- 카프카(https://github.com/cnaps/Infra)
+- MongoDB
+  
