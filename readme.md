@@ -20,4 +20,6 @@
 - 베스트도서서비스(https://github.com/cnaps/BestBookMS)
 - 카프카(https://github.com/cnaps/Infra)
 - MongoDB
-  
+  ```
+    docker run -d -p 27017:27017 --name mongodb mongo
+  ```
